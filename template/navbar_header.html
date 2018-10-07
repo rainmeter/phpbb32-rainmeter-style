@@ -96,30 +96,6 @@
 				<li class="tab forums selected" data-responsive-class="small-icon icon-forums">
 					<a class="nav-link" href="{U_INDEX}">{L_FORUMS}</a>
 				</li>
-				<!-- IF not S_IS_BOT and (S_DISPLAY_MEMBERLIST or U_TEAM) -->
-					<li class="tab members dropdown-container" data-select-match="member" data-responsive-class="small-icon icon-members">
-						<a class="nav-link dropdown-trigger" href="{U_MEMBERLIST}">{L_MEMBERLIST}</a>
-						<div class="dropdown">
-							<div class="pointer"><div class="pointer-inner"></div></div>
-							<ul class="dropdown-contents" role="menu">
-								<!-- IF S_DISPLAY_MEMBERLIST -->
-									<li>
-										<a href="{U_MEMBERLIST}" role="menuitem">
-											<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>{L_MEMBERLIST}</span>
-										</a>
-									</li>
-								<!-- ENDIF -->
-								<!-- IF U_TEAM -->
-									<li>
-										<a href="{U_TEAM}" role="menuitem">
-											<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>{L_THE_TEAM}</span>
-										</a>
-									</li>
-								<!-- ENDIF -->
-							</ul>
-						</div>
-					</li>
-				<!-- ENDIF -->
 				<!-- EVENT navtabs_left_after -->
 			</ul>
 			<ul class="rightside" role="menu">
