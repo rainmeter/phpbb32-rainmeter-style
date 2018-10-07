@@ -1,0 +1,12 @@
+{
+  "name": "phpbb-rainmeter-style",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "build": "npm run build-css",
+    "build-css": "cd theme && node-sass --output-style compressed stylesheet.scss stylesheet.css"
+  },
+  "dependencies": {
+    "node-sass": "^4.9.3"
+  }
+}
