@@ -733,6 +733,11 @@ a.subforum.unread {
 	color: $post-text-color;
 }
 
+.postbody .content {
+border-top: 1px solid;
+border-top-color: $block-inner-border;
+}
+
 // Content container styles
 // ----------------------------------------
 .content {
