@@ -1560,19 +1560,6 @@ function parseDocument($container) {
 	});
 
 	/**
-	* Add online status
-	*/
-	$('#phpbb.can-transform[data-online-text]').each(function() {
-		var text = $(this).attr('data-online-text');
-
-		$container.find('.online').each(function() {
-			var $this = $(this);
-
-			$this.css('position', 'relative').append('<span class="online-ribbon"><span>' + text + '</span><span>' + text + '</span></span>');
-		});
-	});
-
-	/**
 	* Extend poster profile
 	*/
 	if (styleConfig._loaded) {
