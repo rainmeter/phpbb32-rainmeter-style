@@ -576,8 +576,9 @@ dl.details dd {
 li.reported:hover {
 	background-color: $block-background-reported;
 }
+
 .sticky, .announce {
-	// you can add a background for stickies and announcements
+	background-color: $block-background-sticky;
 }
 
 div.rules {
@@ -683,7 +684,7 @@ ul.topiclist li {
 	color: $text-color;
 	@if $split-forums == false {
 		.forabg &, .forumbg & {
-			background: transparent;
+			//background: transparent;
 		}
 	}
 }
