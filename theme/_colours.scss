@@ -45,17 +45,20 @@ hr {
 /* Post body links */
 .postlink {
 	border-bottom-color: $link-color;
-	color: $link-color;
+	text-decoration: underline;
+	color: $primary-color;
 }
 
 .postlink:visited {
-	border-bottom-color: $muted-color;
-	color: $muted-color;
+	border-bottom-color: $link-color;
+	text-decoration: underline;
+	color: $primary-color;
 }
 
 .postlink:hover {
 	background-color: darken($block-background, 10%);
-	color: $link-hover-color;
+	text-decoration: underline;
+	color: $primary-color;
 }
 
 .signature a, .signature a:hover {
