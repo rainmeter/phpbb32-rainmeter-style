@@ -715,7 +715,7 @@ $nav-alert-font-size:		9px !default;
 			@extend %glyph-only;
 			&:after {
 				@extend %glyph-fa;
-				content: '\f01c';	// fa-inbox
+				content: '\f0e0';	// envelope
 			}
 		}
 
