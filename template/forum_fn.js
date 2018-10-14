@@ -4,7 +4,7 @@
 * phpBB3 forum functions
 */
 var styleConfig = {
-	staticNavigation: true,
+	staticNavigation: false,
 	staticNavigationMinWidth: 500,
 	staticNavigationMinHeight: 400,
 	extendPosterProfile: true,
