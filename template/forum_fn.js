@@ -1628,6 +1628,23 @@ function parseDocument($container) {
 }
 
 /**
+* Parse any "Doc" bbcodes
+*/
+function parseBBCode_Doc() {
+	var elements = document.getElementsByClassName("bbcode_doc");  // Find all "Doc" bbcodes
+	for (var i = 0; i < elements.length; i++) {
+		var element = elements[i].innerHTML;
+		var color = elements[i].getAttribute("data-color");  // Header color
+		var tokens = element.split(";;");
+		if (tokens.length == 2) {
+			elements[i].innerHTML = "<div style=\"border-radius:4px 4px 0px 0px;background-color:" + color + ";height:5px;padding:15px;\"><span style=\"color:#fff;float:left;vertical-align:middle;line-height:5px;font-size:115%;\">" + tokens[0] + "</span></div><div style=\"border-radius:0px 0px 4px 4px;border-style:solid;border-width:1px;border-color:#ccc;padding:15px;float:both;\">" + tokens[1] + "</div>";
+		} else if (tokens.length == 3) {
+			elements[i].innerHTML = "<div style=\"border-radius:4px 4px 0px 0px;background-color:" + color + ";height:5px;padding:15px;\"><span style=\"color:#fff;float:left;vertical-align:middle;line-height:5px;font-size:115%;\">" + tokens[0] + "</span><span style=\"color:#fff;float:right;vertical-align:middle;line-width:100%;line-height:5px;font-size:105%;\">" + tokens[1] + "</span></div><div style=\"border-radius:0px 0px 4px 4px;border-style:solid;border-width:1px;border-color:#ccc;padding:15px;float:both;\">" + tokens[2] + "</div>";
+		}
+	}
+}
+
+/**
 * Run onload functions
 */
 jQuery(function($) {
@@ -1747,6 +1764,8 @@ jQuery(function($) {
 				adjustPosterProfile($(this));
 			});
 		}
+
+		parseBBCode_Doc();
 	});
 
 	$(window).resize(function() {
