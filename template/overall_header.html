@@ -67,7 +67,6 @@
 <!-- EVENT overall_header_stylesheets_after -->
 
 <link rel="shortcut icon" href="https://www.rainmeter.net/favicon.ico" />
-
 </head>
 <body id="phpbb" class="nojs notouch section-{SCRIPT_NAME} {S_CONTENT_DIRECTION} {BODY_CLASS}" data-online-text="{L_ONLINE}">
 
@@ -83,7 +82,9 @@
 			<div class="inner">
 
 			<div id="site-description" class="site-description">
-				<a id="logo" class="logo" href="<!-- IF U_SITE_HOME -->{U_SITE_HOME}<!-- ELSE -->{U_INDEX}<!-- ENDIF -->" title="<!-- IF U_SITE_HOME -->{L_SITE_HOME}<!-- ELSE -->{L_INDEX}<!-- ENDIF -->"><img src="{T_THEME_PATH}/images/logo.png" data-src-hd="{T_THEME_PATH}/images/logo_hd.png" alt="{SITENAME}"/></a>
+				<a id="logo" class="logo" href="{% if U_SITE_HOME %}{{ U_SITE_HOME }}{% else %}{{ U_INDEX }}{% endif %}" title="{% if U_SITE_HOME %}{{ L_SITE_HOME }}{% else %}{{ L_INDEX }}{% endif %}">
+					<img src="{T_THEME_PATH}/images/logo.png" data-src-hd="{T_THEME_PATH}/images/logo_hd.png" alt="{SITENAME}"/>
+				</a>
 				<p class="sitename">{SITENAME}</p>
 				<p>{SITE_DESCRIPTION}</p>
 				<p class="skiplink"><a href="#start_here">{L_SKIP}</a></p>
@@ -135,7 +136,7 @@
 	<div id="page-body" class="page-body" role="main">
 		<div class="curr_time">
 			<i class="fa fa-clock-o"></i> {CURRENT_TIME}
-		</div>
+		</div>		
 		{$BREADCRUMBS}
 		<!-- IF S_BOARD_DISABLED and S_USER_LOGGED_IN and (U_MCP or U_ACP) -->
 		<div id="information" class="rules">
