@@ -75,7 +75,7 @@
 		<div class="nav-tabs" data-current-page="<!-- IF $NAV_SECTION -->{$NAV_SECTION}<!-- ELSE -->{SCRIPT_NAME}<!-- ENDIF -->">
 			<ul class="leftside">
 				<li id="quick-links" class="quick-links tab responsive-menu dropdown-container{% if quick_links_all == '' %} empty{% endif %}">
-					<a href="#" class="nav-link dropdown-trigger">{L_QUICK_LINKS}</a>
+					<a href="#" class="nav-link dropdown-trigger rmRainmeterDevTeam-HeaderFix">{L_QUICK_LINKS}</a>
 					<div class="dropdown">
 						<div class="pointer"><div class="pointer-inner"></div></div>
 						<ul class="dropdown-contents" role="menu">
@@ -124,7 +124,7 @@
 				<!-- IF S_REGISTERED_USER -->
 					<!-- EVENT navbar_header_user_profile_prepend -->
 					<li id="username_logged_in" class="tab account dropdown-container" data-skip-responsive="true" data-select-match="ucp">
-						<!-- EVENT navbar_header_username_prepend -->						<a href="{U_PROFILE}" class="nav-link dropdown-trigger">{CURRENT_USERNAME_SIMPLE}</a>
+						<!-- EVENT navbar_header_username_prepend -->						<a href="{U_PROFILE}" class="nav-link dropdown-trigger rmRainmeterDevTeam-HeaderFix">{CURRENT_USERNAME_SIMPLE}</a>
 						<div class="dropdown">
 							<div class="pointer"><div class="pointer-inner"></div></div>
 							<ul class="dropdown-contents" role="menu">
